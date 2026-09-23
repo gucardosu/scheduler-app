@@ -1,10 +1,11 @@
 import express from 'express';
+import healthRoutes from './routes/health.routes.js';
+
 const app = express()
 const port = 3000
 
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok' })
-})
+app.use(express.json())
+app.use(healthRoutes)
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`)
