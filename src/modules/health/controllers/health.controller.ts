@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { pool } from "../database/connection.js";
+import { pool } from "../../../database/connection.js";
 
 export const healthController = {
     getHealth: async (req: Request, res: Response) => {
