@@ -1,5 +1,5 @@
 import express from 'express';
-import healthRoutes from './modules/health/controllers/routes/health.routes.js';
+import healthRoutes from './modules/health/routes/health.routes.js';
 
 const app = express()
 const port = 3000
