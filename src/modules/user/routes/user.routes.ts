@@ -2,13 +2,12 @@ import { Router } from 'express';
 import { UserRepository } from '../repository/user.repository.js';
 import { UserService } from '../services/user.service.js';
 import { UserController } from '../controllers/user.controller.js';
-import router from '../../health/routes/health.routes.js';
 
 const userRepository = new UserRepository();
 const userService = new UserService(userRepository);
 const userController = new UserController(userService);
 
-const authRoutes = Router();
+const router = Router();
 
 router.post('/users', (req, res) => userController.createUser(req, res));
 
